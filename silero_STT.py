@@ -13,7 +13,6 @@ _, decoder, utils = torch.hub.load(repo_or_dir='snakers4/silero-models', model='
  read_audio, prepare_model_input) = utils
 
 # see available models
-
 torch.hub.download_url_to_file('https://raw.githubusercontent.com/snakers4/silero-models/master/models.yml', 'models.yml')
 models = OmegaConf.load('models.yml')
 available_languages = list(models.stt_models.keys())
